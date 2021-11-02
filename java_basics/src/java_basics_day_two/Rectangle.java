@@ -5,21 +5,21 @@ public class Rectangle implements Shape {
 	private double height;
 	private double length;
 	
+	private double area;
+	
 	public Rectangle(double height, double length) {
 		this.height = height;
 		this.length = length;
 	}
 
 	@Override
-	public double calculateArea() {
-		// TODO Auto-generated method stub
-		return this.height * this.length;
+	public void calculateArea() {
+		this.area = this.height * this.length;
 	}
 
 	@Override
 	public void display() {
-		// TODO Auto-generated method stub
-
+		System.out.println(this.area);
 	}
 
 	public double getHeight() {

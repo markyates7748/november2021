@@ -7,24 +7,19 @@ public class Assign2 {
 		// TODO Find max number in 2D array
 		
 		//Create and populate new array with random values
-		int[][] tempArray;
-		tempArray = new int[10][10];
-		
-		for(int i = 0; i < 10; i++) {
-			for(int j = 0; j < 10; j++) {
-				tempArray[i][j] = ((int) (Math.random() * (100 - 1))) + 1;
-			}
-		}
+		int rows = 10;
+		int columns = 10;
+		int[][] createdArray = populate2DArray(rows, columns);
 		
 		int maxValue = -1;
 		int maxValueRow = -1;
 		int maxValueColumn = -1;
 		
 		//Locate the max value and record its location
-		for(int i = 0; i < 10; i++) {
-			for(int j = 0; j < 10; j++) {
-				if(tempArray[i][j] > maxValue) {
-					maxValue = tempArray[i][j];
+		for(int i = 0; i < rows; i++) {
+			for(int j = 0; j < columns; j++) {
+				if(createdArray[i][j] > maxValue) {
+					maxValue = createdArray[i][j];
 					maxValueRow = i;
 					maxValueColumn = j;
 				}
@@ -35,4 +30,17 @@ public class Assign2 {
 		
 	}
 
+	//Method to populate 2D array with specified dimensions with randomly generated values between 1 and 100 inclusive
+	private static int[][] populate2DArray(int rows, int columns){
+		int[][] tempArray;
+		tempArray = new int[rows][columns];
+		
+		for(int i = 0; i < rows; i++) {
+			for(int j = 0; j < columns; j++) {
+				tempArray[i][j] = ((int) (Math.random() * (100 - 1))) + 1;
+			}
+		}
+		return tempArray;
+	}
+	
 }
