@@ -1,7 +1,12 @@
 package java_basics_day_three;
 
-import java.io.*;
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 public class Assign3 {
 	
@@ -9,7 +14,13 @@ public class Assign3 {
 	public static void main(String[] args) throws FileNotFoundException {
 		
 		String fileToRead = args[0];
-		String characterToCheck = args[1];
+		String characterToCheck;
+		try {
+			characterToCheck = args[1];
+		} catch(Exception e) {
+			System.out.print("Please enter a character to check: ");
+			characterToCheck = new Scanner(System.in).nextLine();
+		}
 		int numberOfCharacters = 0;
 		List<String> fileLines = new ArrayList<String>();
 		
@@ -20,7 +31,6 @@ public class Assign3 {
 			}
 			br.close();
 			for(String str: fileLines) {
-				//System.out.println(str);
 				for(int i = 0; i < str.length(); i++) {
 					if(str.charAt(i) == characterToCheck.charAt(0)) {
 						numberOfCharacters++;
@@ -29,7 +39,7 @@ public class Assign3 {
 			}
 			System.out.printf("The character %s was found %d times", characterToCheck, numberOfCharacters);
 		}catch(IOException e) {
-			
+			e.printStackTrace();
 		}
 		
 	}
