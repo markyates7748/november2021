@@ -6,7 +6,7 @@ public class DeadlockExample {
 	private static Object resourceB = new Object();
 
 	public static void main(String[] args) {
-		// TODO Create a deadlock between two threads
+		//Create a deadlock between two threads
 		SampleThreadOne thread1 = new SampleThreadOne();
 		SampleThreadTwo thread2 = new SampleThreadTwo();
 

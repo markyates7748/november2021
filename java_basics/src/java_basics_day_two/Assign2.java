@@ -4,7 +4,7 @@ public class Assign2 {
 
 	public static void main(String[] args) {
 		
-		// TODO Find max number in 2D array
+		// Find max number in 2D array
 		
 		//Create and populate new array with random values
 		int rows = 10;

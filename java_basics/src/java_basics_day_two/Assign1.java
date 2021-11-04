@@ -4,7 +4,7 @@ public class Assign1 {
 
 	public static void main(String[] args) {
 
-		// TODO take values from the command line and add them together
+		// Take values from the command line and add them together
 		int sum = 0;
 
 		for(String s : args) {

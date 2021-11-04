@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class Assign2 {
 
-	// TODO: Append text to an existing file
+	//Append text to an existing file
 	public static void main(String[] args) throws FileNotFoundException {
 
 		String fileToAppend = args[0];

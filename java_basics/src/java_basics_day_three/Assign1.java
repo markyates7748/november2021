@@ -4,7 +4,7 @@ import java.io.File;
 
 public class Assign1 {
 	
-	//TODO: get all file/directory names in given directory
+	//Get all file/directory names in given directory
 	public static void main(String[] args) {
 		//Get directory path from CL
 		String filePath = args[0];

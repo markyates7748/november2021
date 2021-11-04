@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 public class Assign3 {
 	
-	//TODO: Count number of times a char appears in a file
+	//Count number of times a char appears in a file
 	public static void main(String[] args) throws FileNotFoundException {
 		
 		String fileToRead = args[0];
