@@ -75,6 +75,31 @@ public class BasicLambdaFunctions {
 			.forEach(System.out :: println);
 		System.out.println();
 		
+		//Comma separated string
+		System.out.println("Creating a comma seperated string from a List of Integers");
+		List<Integer> simpleIntegerArray = new ArrayList<>();
+		for(int i = 0; i < 15; i++) {
+			simpleIntegerArray.add(((int) (Math.random() * (100 - 1))) + 1);
+		}
+		StringBuilder builtIntegerString = new StringBuilder();
+		simpleIntegerArray.stream()
+				.forEach(num -> {
+							if(num % 2 == 0) {
+								builtIntegerString.append("e" + num.toString() + ",");
+							}else {
+								builtIntegerString.append("o" + num.toString() + ",");
+							}
+						});
+		System.out.println(builtIntegerString);
+		System.out.println();
+		
+		//Return only strings starting with 'a' of length 3
+		System.out.println("Strings beginning with 'a' of length 3");
+		simpleStringArray.stream()
+			.filter(str -> str.charAt(0) == 'a')
+			.filter(str -> str.length() == 3)
+			.forEach(System.out :: println);
+		System.out.println();
 	}
 	
 }
