@@ -17,7 +17,7 @@ public class SampleSingleton {
 	
 	public static SampleSingleton getInstance() {
 		if(instance == null) {
-			synchronized(Singleton .class) {
+			synchronized(conn) {
 				if(instance == null) {
 					instance = new SampleSingleton();
 				}
