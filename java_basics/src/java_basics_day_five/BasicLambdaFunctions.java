@@ -75,6 +75,14 @@ public class BasicLambdaFunctions {
 			.forEach(System.out :: println);
 		System.out.println();
 		
+		//Ordered by having 'e' part 2
+		System.out.println("Ordered by having 'e' again");
+		simpleStringArray.stream()
+			.sorted(hasEComparator)
+			.collect(Collectors.toList())
+			.forEach(System.out :: println);
+		System.out.println();
+		
 		//Comma separated string
 		System.out.println("Creating a comma seperated string from a List of Integers");
 		List<Integer> simpleIntegerArray = new ArrayList<>();
@@ -100,6 +108,10 @@ public class BasicLambdaFunctions {
 			.filter(str -> str.length() == 3)
 			.forEach(System.out :: println);
 		System.out.println();
+		
+		
 	}
-	
+	static Comparator<String> hasEComparator = (str1, str2) -> {
+		return (str2.contains("e") == true ? 1 : 0) - (str1.contains("e") == true ? 1 : 0);
+	};
 }
