@@ -14,11 +14,11 @@ originalOrder = [[34587, 'Learning Python, Mark Lutz', 4, 40.95],
 
 #TODO: Part 2
 #return list with 2-tuples of (order number, product) and (price, quantity)
-print('Part 2: create list of 2-tuples with original configuration')
-print('Done in [(orderNumber, bookTitleAndAuthor), (pricePerItem, quantity)] format')
-partTwoList = list(map(lambda x: [(x[0], x[1]), (x[3], x[2])], originalOrder))
-print(partTwoList)
-print('')
+#print('Part 2: create list of 2-tuples with original configuration')
+#print('Done in [(orderNumber, bookTitleAndAuthor), (pricePerItem, quantity)] format')
+#partTwoList = list(map(lambda x: [(x[0], x[1]), (x[3], x[2])], originalOrder))
+#print(partTwoList)
+#print('')
 print('Done in [(orderNumber, totalPrice), ...] format')
 partTwoList = list(map(lambda x: (x[0], x[2] * x[3]), originalOrder))
 print(partTwoList)
