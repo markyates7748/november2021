@@ -1,0 +1,21 @@
+8220 - [INFO ] - Starting weekend assignment program
+8220 - [INFO ] - opening expedia_report_monthly_january_2018.xlsx
+8220 - [INFO ] - getting expedia_report_monthly_january_2018.xlsx sheets
+8220 - [INFO ] - extracting <Worksheet "Summary Rolling MoM"> sheet data
+8220 - [INFO ] - <Worksheet "Summary Rolling MoM"> data extraction completed
+8220 - [INFO ] - searching extracted data for 2018-01-01
+8220 - [INFO ] - data for 2018-01-01 found
+8220 - [INFO ] - extracing <Worksheet "VOC Rolling MoM"> sheet data
+8220 - [INFO ] - <Worksheet "VOC Rolling MoM"> data extraction completed
+8220 - [INFO ] - searching extracted data for 2018-01-01
+8220 - [INFO ] - data for 2018-01-01 found
+8220 - [INFO ] - opening expedia_report_monthly_march_2018.xlsx
+8220 - [INFO ] - getting expedia_report_monthly_march_2018.xlsx sheets
+8220 - [INFO ] - extracting <Worksheet "Summary Rolling MoM"> sheet data
+8220 - [INFO ] - <Worksheet "Summary Rolling MoM"> data extraction completed
+8220 - [INFO ] - searching extracted data for 2018-03-18
+8220 - [INFO ] - data for 2018-03-18 found
+8220 - [INFO ] - extracing <Worksheet "VOC Rolling MoM"> sheet data
+8220 - [INFO ] - <Worksheet "VOC Rolling MoM"> data extraction completed
+8220 - [INFO ] - searching extracted data for 2018-03-18
+8220 - [INFO ] - data for 2018-03-18 found
