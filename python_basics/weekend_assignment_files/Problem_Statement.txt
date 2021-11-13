@@ -18,7 +18,8 @@ Similarly go to "VOC Rolling MoM" tab
 Grab all the values related to Jan-18 and print.
 
 In Net Promoter Score : Promoters > 200 : good Promoters <200 : bad
-			Passives > 100 : good Passives <100 : bad
-			Decractors > 100 : good Decrators <100 : bad
+						Passives > 100 : good Passives <100 : bad
+						Decractors > 100 : good Decrators <100 : bad
+		say type
 
 Rest all values remain the same.
