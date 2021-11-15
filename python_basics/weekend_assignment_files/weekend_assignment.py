@@ -2,7 +2,7 @@ from openpyxl import load_workbook
 import datetime
 import logging
 
-logging.basicConfig(level=logging.INFO, filename="assignment_log.log", filemode='w', format='%(process)d - [%(levelname)s ] - %(message)s')
+logging.basicConfig(level=logging.INFO, filename="assignment_log.log", filemode='a', format='%(process)d - [%(levelname)s ] - %(message)s')
 
 logging.info('Starting weekend assignment program')
 
@@ -54,6 +54,8 @@ try:
             summary_data[data_id] = datum
         logging.info(f'{summary_sheet} data extraction completed')
 
+        # bool variable to check if data is found
+        found_data = False
         # print all values of desired month
         print(f'Getting information about {given_month} {given_year} Summary')
         logging.info(f'searching extracted summary data for {given_month} {given_year}')
@@ -61,17 +63,20 @@ try:
             # check if key contains short month name and year
             if (given_month[:3] in data_id.lower()) and (given_year in data_id):
                 logging.info(f'found {given_month} {given_year} with values {data_values.items()}')
+                found_data = True
                 # get individual values
                 for key in data_values:
                     if key == "Calls Offered":
                         print(key + ':', data_values[key])
                     else:
                         print(f'{key} : {(data_values[key]*100):.2f}%')
+        if not found_data:
+            print(f'Summary data for {given_month} {given_year} not found')
+            logging.info(f'no summary data for {given_month} {given_year} found')
         print('')
     except Exception as e:
         logging.error(f'error extracting data from {summary_sheet}', exc_info=True)
     
-
     # VOC data dictionary
     voc_data = {}
 
@@ -106,12 +111,15 @@ try:
         # print all values of desired month
         print(f'Getting information about {given_month} {given_year} VOC')
         logging.info(f'searching extracted VOC data for {given_month} {given_year}')
+        # bool variable to check if data is found
+        found_data = False
         # temp string var for net promoter score
         net_promoter_score = ""
         for data_id, data_values in voc_data.items():
             # check if key contains short month name and year
             if (given_month[:3] in data_id.lower()) and (given_year in data_id):
                 logging.info(f'found {given_month} {given_year} with values {data_values.items()}')
+                found_data = True
                 # get individual values
                 for key in data_values:
                     if "Percent" in key:
@@ -141,8 +149,12 @@ try:
                             else:
                                 print('bad detractors')
                                 net_promoter_score += 'bad detractors'
+        if not found_data:
+            print(f'VOC data for {given_month} {given_year} not found')
+            logging.info(f'no VOC data for {given_month} {given_year} found')
+        else:
+            logging.info(f'{given_month} {given_year} had {net_promoter_score}')
         print('')
-        logging.info(f'{given_month} {given_year} had {net_promoter_score}')
     except Exception as e:
         logging.error(f'error extracting data from {voc_sheet}', exc_info=True)
 except Exception as e:

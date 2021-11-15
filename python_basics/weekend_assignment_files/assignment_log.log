@@ -1,13 +1,57 @@
-4152 - [INFO ] - Starting weekend assignment program
-4152 - [INFO ] - opening expedia_report_monthly_march_2018.xlsx to check for april 2017
-4152 - [INFO ] - getting expedia_report_monthly_march_2018.xlsx sheets
-4152 - [INFO ] - extracting <Worksheet "Summary Rolling MoM"> sheet data
-4152 - [INFO ] - <Worksheet "Summary Rolling MoM"> data extraction completed
-4152 - [INFO ] - searching extracted data for april 2017
-4152 - [INFO ] - found april 2017 with values dict_items([('Calls Offered', 23074), ('Abandon after 30s', 0.0524), ('FCR', 0.859), ('DSAT', 0.134), ('CSAT', 0.787)])
-4152 - [INFO ] - extracing <Worksheet "VOC Rolling MoM"> sheet data
-4152 - [INFO ] - <Worksheet "VOC Rolling MoM"> data extraction completed
-4152 - [INFO ] - searching extracted VOC data for april 2017
-4152 - [INFO ] - found april 2017 with values dict_items([('Base Size', 535), ('Promoters Total', 310), ('Promoters Percent', 0.579), ('Passives Total', 97), ('Passives Percent', 0.181), ('Detractors Total', 128), ('Detractors Percent', 0.239), ('Overall NPS Percent', 0.3402), ('Sat with Agent Percent', 0.787), ('DSat with Agent Percent', 0.134)])
-4152 - [INFO ] - april 2017 had good promoters, bad passives, good detractors
-4152 - [INFO ] - Ending weekend assignment program
+6460 - [INFO ] - Starting weekend assignment program
+6460 - [INFO ] - opening expedia_report_monthly_march_2018.xlsx to check for march 2018
+6460 - [INFO ] - getting expedia_report_monthly_march_2018.xlsx sheets
+6460 - [INFO ] - extracting <Worksheet "Summary Rolling MoM"> sheet data
+6460 - [INFO ] - <Worksheet "Summary Rolling MoM"> data extraction completed
+6460 - [INFO ] - searching extracted summary data for march 2018
+6460 - [INFO ] - found march 2018 with values dict_items([('Calls Offered', 22343), ('Abandon after 30s', 0.0305), ('FCR', 0.86), ('DSAT', 0.18), ('CSAT', 0.744)])
+6460 - [INFO ] - extracing <Worksheet "VOC Rolling MoM"> sheet data
+6460 - [INFO ] - <Worksheet "VOC Rolling MoM"> data extraction completed
+6460 - [INFO ] - searching extracted VOC data for march 2018
+6460 - [INFO ] - found march 2018 with values dict_items([('Base Size', 508), ('Promoters Total', 279), ('Promoters Percent', 0.549), ('Passives Total', 21), ('Passives Percent', 0.171), ('Detractors Total', 33), ('Detractors Percent', 0.268), ('Overall NPS Percent', 0.2874), ('Sat with Agent Percent', 0.744), ('DSat with Agent Percent', 0.18)])
+6460 - [INFO ] - march 2018 had good promoters, bad passives, bad detractors
+6460 - [INFO ] - Ending weekend assignment program
+7764 - [INFO ] - Starting weekend assignment program
+7764 - [INFO ] - opening expedia_report_monthly_march_2018.xlsx to check for april 2015
+7764 - [INFO ] - getting expedia_report_monthly_march_2018.xlsx sheets
+7764 - [INFO ] - extracting <Worksheet "Summary Rolling MoM"> sheet data
+7764 - [INFO ] - <Worksheet "Summary Rolling MoM"> data extraction completed
+7764 - [INFO ] - searching extracted summary data for april 2015
+7764 - [INFO ] - no summary data for april 2015 found
+7764 - [INFO ] - extracing <Worksheet "VOC Rolling MoM"> sheet data
+7764 - [INFO ] - <Worksheet "VOC Rolling MoM"> data extraction completed
+7764 - [INFO ] - searching extracted VOC data for april 2015
+7764 - [INFO ] - no VOC data for april 2015 found
+7764 - [INFO ] - Ending weekend assignment program
+3004 - [INFO ] - Starting weekend assignment program
+3004 - [INFO ] - opening expedia_report_monthly_april_2018.xlsx to check for january 2017
+3004 - [ERROR ] - error opening expedia_report_monthly_april_2018.xlsx
+Traceback (most recent call last):
+  File "C:\Users\myate\git\november2021\python_basics\weekend_assignment_files\weekend_assignment.py", line 24, in <module>
+    derived_workbook = load_workbook(derived_filename)
+  File "C:\Users\myate\anaconda3\lib\site-packages\openpyxl\reader\excel.py", line 315, in load_workbook
+    reader = ExcelReader(filename, read_only, keep_vba,
+  File "C:\Users\myate\anaconda3\lib\site-packages\openpyxl\reader\excel.py", line 124, in __init__
+    self.archive = _validate_archive(fn)
+  File "C:\Users\myate\anaconda3\lib\site-packages\openpyxl\reader\excel.py", line 96, in _validate_archive
+    archive = ZipFile(filename, 'r')
+  File "C:\Users\myate\anaconda3\lib\zipfile.py", line 1251, in __init__
+    self.fp = io.open(file, filemode)
+FileNotFoundError: [Errno 2] No such file or directory: 'expedia_report_monthly_april_2018.xlsx'
+3004 - [INFO ] - Ending weekend assignment program
+5744 - [INFO ] - Starting weekend assignment program
+5744 - [INFO ] - opening expedia_report_monthly_january_2018.xlsx to check for may 2016
+5744 - [INFO ] - getting expedia_report_monthly_january_2018.xlsx sheets
+5744 - [ERROR ] - error getting expedia_report_monthly_january_2018.xlsx sheets
+Traceback (most recent call last):
+  File "C:\Users\myate\git\november2021\python_basics\weekend_assignment_files\weekend_assignment.py", line 27, in <module>
+    summary_sheet = derived_workbook["Summary Rolling DaD"]
+  File "C:\Users\myate\anaconda3\lib\site-packages\openpyxl\workbook\workbook.py", line 288, in __getitem__
+    raise KeyError("Worksheet {0} does not exist.".format(key))
+KeyError: 'Worksheet Summary Rolling DaD does not exist.'
+5744 - [ERROR ] - error opening expedia_report_monthly_january_2018.xlsx
+Traceback (most recent call last):
+  File "C:\Users\myate\git\november2021\python_basics\weekend_assignment_files\weekend_assignment.py", line 35, in <module>
+    logging.info(f'extracting {summary_sheet} sheet data')
+NameError: name 'summary_sheet' is not defined
+5744 - [INFO ] - Ending weekend assignment program
