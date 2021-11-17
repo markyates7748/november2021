@@ -32,5 +32,5 @@ identity_matrix = np.eye(3)
 print(identity_matrix)
 
 # 9: Generate random number between 0 and 1
-rand_val = np.random.rand()
+rand_val = np.random.rand(1)
 print(rand_val)
