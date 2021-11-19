@@ -1,0 +1,19 @@
+2021/11/19 14:25:02 - [INFO ] - Starting NYL agent file processing
+2021/11/19 14:25:02 - [INFO ] - Attempting to access C:/Users/myate/git/november2021/python_basics/panda_weekend_project_files directory
+2021/11/19 14:25:02 - [INFO ] - Directory opened. Searching for relevent files
+2021/11/19 14:25:02 - [INFO ] - Found the following files: ['NYL_FieldAgent_20210129.csv', 'NYL_FieldAgent_20210205.csv', 'NYL_FieldAgent_20210212.csv', 'NYL_FieldAgent_20210219.csv']
+2021/11/19 14:25:02 - [INFO ] - sorted files by date: ['NYL_FieldAgent_20210219.csv', 'NYL_FieldAgent_20210212.csv', 'NYL_FieldAgent_20210205.csv', 'NYL_FieldAgent_20210129.csv']
+2021/11/19 14:25:02 - [INFO ] - Checking latest file is sufficiently different
+2021/11/19 14:25:02 - [INFO ] - Latest file is significantly different. Checking NYL.lst if file was previously processed
+2021/11/19 14:25:02 - [INFO ] - Latest file has not yet been processed. Beginning processing
+2021/11/19 14:25:02 - [INFO ] - Ensuring correct Contract header names
+2021/11/19 14:25:02 - [INFO ] - Checking for invalid phone numbers
+2021/11/19 14:25:02 - [INFO ] - Validation for '016.774.6236' failed: invalid number
+2021/11/19 14:25:02 - [INFO ] - Checking for invalid States
+2021/11/19 14:25:02 - [INFO ] - Validation for 'AA' failed: invalid state
+2021/11/19 14:25:03 - [INFO ] - Checking for invalid email addresses
+2021/11/19 14:25:03 - [INFO ] - Validation for 'stevemorganft.NewYorkLife.com' failed: Invalid email address.
+2021/11/19 14:25:03 - [INFO ] - Creating new dataframe with headers as indices
+2021/11/19 14:25:03 - [INFO ] - Grouping Agent Id by Agency State
+2021/11/19 14:25:03 - [INFO ] - Creating new DataFrame with Agent Last Name, Contract Start Date, Date of Becoming A2O
+2021/11/19 14:25:03 - [INFO ] - Ending NYL agent processing
