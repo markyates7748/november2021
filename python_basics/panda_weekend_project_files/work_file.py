@@ -7,10 +7,11 @@ import numpy as np
 import pandas as pd
 import regex as re
 import os, logging, phonenumbers
-import matplotlib.pyplot
+import matplotlib.pyplot as plt
 from datetime import datetime as dt
 from validate_email import validate_email
 
+# function to check if state is valid
 def check_state(check_me):
     valid_states = ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DC", "DE", "FL", "GA", 
           "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", 
@@ -25,7 +26,7 @@ def check_state(check_me):
     return is_valid
 
 # set up logging
-logging.basicConfig(level=logging.INFO, filename="agents_log.log", filemode="w", format="%(asctime)s - [%(levelname)s ] - %(message)s", datefmt="%Y/%m/%d %H:%M:%S")
+logging.basicConfig(level=logging.INFO, filename="agents_log.log", filemode="a", format="%(asctime)s - [%(levelname)s ] - %(message)s", datefmt="%Y/%m/%d %H:%M:%S")
 
 logging.info("Starting NYL agent file processing")
 
@@ -114,8 +115,8 @@ try:
 
                 # create new dataframe which groups agents by Agency State
                 logging.info("Grouping Agent Id by Agency State")
-                new_df_1 = latest_file.groupby(["Agency State"])
-                print(new_df_1.first())
+                new_df_1 = pd.DataFrame(latest_file.groupby(["Agency State"])["Agent Id"])
+                print(new_df_1)
 
                 # create new dataframe with Agent Name, Agent Writing Contract Start Date, Date when an agent became A20
                 logging.info("Creating new DataFrame with Agent Last Name, Contract Start Date, Date of Becoming A2O")
@@ -123,12 +124,22 @@ try:
                 print(new_df_2)
 
                 # create data visualization with first two dataframes
-                print(new_df_1["Agency State"].count())
+                logging.info("Creating histogram with number of agents in each state")
+                try:
+                    hist_df = pd.DataFrame(latest_file["Agency State"].value_counts())
+                    hist_df.hist(column="Agency State")
+                    plt.show()
+                except Exception as e:
+                    logging.error('Error creating histogram', exc_info=True)
 
                 # append filename to list of processed files
-                #with open("NYL.lst", "a") as f:
-                #    f.write(found_files[0])
-                #f.close()
+                logging.info("Recording file as processes in NYL.lst")
+                try:
+                    with open("NYL.lst", "a") as f:
+                        f.write(found_files[0])
+                    f.close()
+                except Exception as e:
+                    logging.error("Error recording to NYL.lst", exc_info=True)
         except Exception as e:
             print("error opening NYL.lst")
             logging.error("Error opening NYL.lst", exc_info=True)
