@@ -28,3 +28,127 @@
 2021/11/19 17:03:45 - [INFO ] - Latest file is significantly different. Checking NYL.lst if file was previously processed
 2021/11/19 17:03:45 - [ERROR ] - Latest file has already been processed
 2021/11/19 17:03:45 - [INFO ] - Ending NYL agent processing
+2021/11/22 08:18:52 - [INFO ] - Starting NYL agent file processing
+2021/11/22 08:18:52 - [INFO ] - Attempting to access C:/Users/myate/git/november2021/python_basics/panda_weekend_project_files directory
+2021/11/22 08:18:52 - [INFO ] - Directory opened. Searching for relevent files
+2021/11/22 08:18:52 - [INFO ] - Found the following files: ['NYL_FieldAgent_20210129.csv', 'NYL_FieldAgent_20210205.csv', 'NYL_FieldAgent_20210212.csv', 'NYL_FieldAgent_20210219.csv']
+2021/11/22 08:18:52 - [INFO ] - sorted files by date: ['NYL_FieldAgent_20210219.csv', 'NYL_FieldAgent_20210212.csv', 'NYL_FieldAgent_20210205.csv', 'NYL_FieldAgent_20210129.csv']
+2021/11/22 08:18:52 - [INFO ] - Checking latest file is sufficiently different
+2021/11/22 08:18:52 - [INFO ] - Latest file is significantly different. Checking NYL.lst if file was previously processed
+2021/11/22 08:18:52 - [INFO ] - Latest file has not yet been processed. Beginning processing
+2021/11/22 08:18:52 - [INFO ] - Ensuring correct Contract header names
+2021/11/22 08:18:52 - [INFO ] - Checking for invalid phone numbers
+2021/11/22 08:18:52 - [INFO ] - Validation for '016.774.6236' failed: invalid number
+2021/11/22 08:18:52 - [INFO ] - Checking for invalid States
+2021/11/22 08:18:52 - [INFO ] - Validation for 'AA' failed: invalid state
+2021/11/22 08:18:52 - [INFO ] - Checking for invalid email addresses
+2021/11/22 08:18:52 - [INFO ] - Validation for 'stevemorganft.NewYorkLife.com' failed: Invalid email address.
+2021/11/22 08:18:52 - [INFO ] - Creating new dataframe with headers as indices
+2021/11/22 08:18:52 - [INFO ] - Grouping Agent Id by Agency State
+2021/11/22 08:18:53 - [INFO ] - Creating new DataFrame with Agent Last Name, Contract Start Date, Date of Becoming A2O
+2021/11/22 08:18:53 - [INFO ] - Creating histogram with number of agents in each state
+2021/11/22 08:18:53 - [ERROR ] - Error creating histogram
+Traceback (most recent call last):
+  File "C:\Users\myate\git\november2021\python_basics\panda_weekend_project_files\work_file.py", line 133, in <module>
+    hist_df = new_df_0.hist(index="Agency State")
+AttributeError: 'MultiIndex' object has no attribute 'hist'
+2021/11/22 08:18:53 - [INFO ] - Ending NYL agent processing
+2021/11/22 08:20:52 - [INFO ] - Starting NYL agent file processing
+2021/11/22 08:20:52 - [INFO ] - Attempting to access C:/Users/myate/git/november2021/python_basics/panda_weekend_project_files directory
+2021/11/22 08:20:52 - [INFO ] - Directory opened. Searching for relevent files
+2021/11/22 08:20:52 - [INFO ] - Found the following files: ['NYL_FieldAgent_20210129.csv', 'NYL_FieldAgent_20210205.csv', 'NYL_FieldAgent_20210212.csv', 'NYL_FieldAgent_20210219.csv']
+2021/11/22 08:20:52 - [INFO ] - sorted files by date: ['NYL_FieldAgent_20210219.csv', 'NYL_FieldAgent_20210212.csv', 'NYL_FieldAgent_20210205.csv', 'NYL_FieldAgent_20210129.csv']
+2021/11/22 08:20:52 - [INFO ] - Checking latest file is sufficiently different
+2021/11/22 08:20:52 - [INFO ] - Latest file is significantly different. Checking NYL.lst if file was previously processed
+2021/11/22 08:20:52 - [INFO ] - Latest file has not yet been processed. Beginning processing
+2021/11/22 08:20:52 - [INFO ] - Ensuring correct Contract header names
+2021/11/22 08:20:52 - [INFO ] - Checking for invalid phone numbers
+2021/11/22 08:20:52 - [INFO ] - Validation for '016.774.6236' failed: invalid number
+2021/11/22 08:20:53 - [INFO ] - Checking for invalid States
+2021/11/22 08:20:53 - [INFO ] - Validation for 'AA' failed: invalid state
+2021/11/22 08:20:53 - [INFO ] - Checking for invalid email addresses
+2021/11/22 08:20:53 - [INFO ] - Validation for 'stevemorganft.NewYorkLife.com' failed: Invalid email address.
+2021/11/22 08:20:53 - [INFO ] - Creating new dataframe with headers as indices
+2021/11/22 08:20:53 - [INFO ] - Grouping Agent Id by Agency State
+2021/11/22 08:20:53 - [INFO ] - Creating new DataFrame with Agent Last Name, Contract Start Date, Date of Becoming A2O
+2021/11/22 08:20:53 - [INFO ] - Creating histogram with number of agents in each state
+2021/11/22 08:20:53 - [ERROR ] - Error creating histogram
+Traceback (most recent call last):
+  File "C:\Users\myate\git\november2021\python_basics\panda_weekend_project_files\work_file.py", line 133, in <module>
+    hist_df = new_df_1.hist(column="Agent Writing Contract Start Date")
+  File "C:\Users\myate\anaconda3\lib\site-packages\pandas\plotting\_core.py", line 211, in hist_frame
+    return plot_backend.hist_frame(
+  File "C:\Users\myate\anaconda3\lib\site-packages\pandas\plotting\_matplotlib\hist.py", line 427, in hist_frame
+    raise ValueError(
+ValueError: hist method requires numerical or datetime columns, nothing to plot.
+2021/11/22 08:20:53 - [INFO ] - Ending NYL agent processing
+2021/11/22 08:21:46 - [INFO ] - Starting NYL agent file processing
+2021/11/22 08:21:46 - [INFO ] - Attempting to access C:/Users/myate/git/november2021/python_basics/panda_weekend_project_files directory
+2021/11/22 08:21:46 - [INFO ] - Directory opened. Searching for relevent files
+2021/11/22 08:21:46 - [INFO ] - Found the following files: ['NYL_FieldAgent_20210129.csv', 'NYL_FieldAgent_20210205.csv', 'NYL_FieldAgent_20210212.csv', 'NYL_FieldAgent_20210219.csv']
+2021/11/22 08:21:46 - [INFO ] - sorted files by date: ['NYL_FieldAgent_20210219.csv', 'NYL_FieldAgent_20210212.csv', 'NYL_FieldAgent_20210205.csv', 'NYL_FieldAgent_20210129.csv']
+2021/11/22 08:21:46 - [INFO ] - Checking latest file is sufficiently different
+2021/11/22 08:21:46 - [INFO ] - Latest file is significantly different. Checking NYL.lst if file was previously processed
+2021/11/22 08:21:46 - [INFO ] - Latest file has not yet been processed. Beginning processing
+2021/11/22 08:21:46 - [INFO ] - Ensuring correct Contract header names
+2021/11/22 08:21:46 - [INFO ] - Checking for invalid phone numbers
+2021/11/22 08:21:46 - [INFO ] - Validation for '016.774.6236' failed: invalid number
+2021/11/22 08:21:46 - [INFO ] - Checking for invalid States
+2021/11/22 08:21:46 - [INFO ] - Validation for 'AA' failed: invalid state
+2021/11/22 08:21:46 - [INFO ] - Checking for invalid email addresses
+2021/11/22 08:21:46 - [INFO ] - Validation for 'stevemorganft.NewYorkLife.com' failed: Invalid email address.
+2021/11/22 08:21:46 - [INFO ] - Creating new dataframe with headers as indices
+2021/11/22 08:21:46 - [INFO ] - Grouping Agent Id by Agency State
+2021/11/22 08:21:46 - [INFO ] - Creating new DataFrame with Agent Last Name, Contract Start Date, Date of Becoming A2O
+2021/11/22 08:21:46 - [INFO ] - Creating histogram with number of agents in each state
+2021/11/22 08:21:46 - [ERROR ] - Error creating histogram
+Traceback (most recent call last):
+  File "C:\Users\myate\git\november2021\python_basics\panda_weekend_project_files\work_file.py", line 133, in <module>
+    hist_df = new_df_1.hist(column="Date when an agent became A2O")
+  File "C:\Users\myate\anaconda3\lib\site-packages\pandas\plotting\_core.py", line 211, in hist_frame
+    return plot_backend.hist_frame(
+  File "C:\Users\myate\anaconda3\lib\site-packages\pandas\plotting\_matplotlib\hist.py", line 427, in hist_frame
+    raise ValueError(
+ValueError: hist method requires numerical or datetime columns, nothing to plot.
+2021/11/22 08:21:46 - [INFO ] - Ending NYL agent processing
+2021/11/22 08:22:30 - [INFO ] - Starting NYL agent file processing
+2021/11/22 08:22:30 - [INFO ] - Attempting to access C:/Users/myate/git/november2021/python_basics/panda_weekend_project_files directory
+2021/11/22 08:22:30 - [INFO ] - Directory opened. Searching for relevent files
+2021/11/22 08:22:30 - [INFO ] - Found the following files: ['NYL_FieldAgent_20210129.csv', 'NYL_FieldAgent_20210205.csv', 'NYL_FieldAgent_20210212.csv', 'NYL_FieldAgent_20210219.csv']
+2021/11/22 08:22:30 - [INFO ] - sorted files by date: ['NYL_FieldAgent_20210219.csv', 'NYL_FieldAgent_20210212.csv', 'NYL_FieldAgent_20210205.csv', 'NYL_FieldAgent_20210129.csv']
+2021/11/22 08:22:30 - [INFO ] - Checking latest file is sufficiently different
+2021/11/22 08:22:30 - [INFO ] - Latest file is significantly different. Checking NYL.lst if file was previously processed
+2021/11/22 08:22:30 - [INFO ] - Latest file has not yet been processed. Beginning processing
+2021/11/22 08:22:30 - [INFO ] - Ensuring correct Contract header names
+2021/11/22 08:22:30 - [INFO ] - Checking for invalid phone numbers
+2021/11/22 08:22:31 - [INFO ] - Validation for '016.774.6236' failed: invalid number
+2021/11/22 08:22:31 - [INFO ] - Checking for invalid States
+2021/11/22 08:22:31 - [INFO ] - Validation for 'AA' failed: invalid state
+2021/11/22 08:22:31 - [INFO ] - Checking for invalid email addresses
+2021/11/22 08:22:31 - [INFO ] - Validation for 'stevemorganft.NewYorkLife.com' failed: Invalid email address.
+2021/11/22 08:22:31 - [INFO ] - Creating new dataframe with headers as indices
+2021/11/22 08:22:31 - [INFO ] - Grouping Agent Id by Agency State
+2021/11/22 08:22:31 - [INFO ] - Creating new DataFrame with Agent Last Name, Contract Start Date, Date of Becoming A2O
+2021/11/22 08:22:31 - [INFO ] - Creating histogram with number of agents in each state
+2021/11/22 08:23:42 - [INFO ] - Ending NYL agent processing
+2021/11/22 08:25:50 - [INFO ] - Starting NYL agent file processing
+2021/11/22 08:25:50 - [INFO ] - Attempting to access C:/Users/myate/git/november2021/python_basics/panda_weekend_project_files directory
+2021/11/22 08:25:50 - [INFO ] - Directory opened. Searching for relevent files
+2021/11/22 08:25:50 - [INFO ] - Found the following files: ['NYL_FieldAgent_20210129.csv', 'NYL_FieldAgent_20210205.csv', 'NYL_FieldAgent_20210212.csv', 'NYL_FieldAgent_20210219.csv']
+2021/11/22 08:25:50 - [INFO ] - sorted files by date: ['NYL_FieldAgent_20210219.csv', 'NYL_FieldAgent_20210212.csv', 'NYL_FieldAgent_20210205.csv', 'NYL_FieldAgent_20210129.csv']
+2021/11/22 08:25:50 - [INFO ] - Checking latest file is sufficiently different
+2021/11/22 08:25:50 - [INFO ] - Latest file is significantly different. Checking NYL.lst if file was previously processed
+2021/11/22 08:25:50 - [INFO ] - Latest file has not yet been processed. Beginning processing
+2021/11/22 08:25:50 - [INFO ] - Ensuring correct Contract header names
+2021/11/22 08:25:50 - [INFO ] - Checking for invalid phone numbers
+2021/11/22 08:25:50 - [INFO ] - Validation for '016.774.6236' failed: invalid number
+2021/11/22 08:25:50 - [INFO ] - Checking for invalid States
+2021/11/22 08:25:50 - [INFO ] - Validation for 'AA' failed: invalid state
+2021/11/22 08:25:50 - [INFO ] - Checking for invalid email addresses
+2021/11/22 08:25:50 - [INFO ] - Validation for 'stevemorganft.NewYorkLife.com' failed: Invalid email address.
+2021/11/22 08:25:50 - [INFO ] - Creating new dataframe with headers as indices
+2021/11/22 08:25:50 - [INFO ] - Grouping Agent Id by Agency State
+2021/11/22 08:25:50 - [INFO ] - Creating new DataFrame with Agent Last Name, Contract Start Date, Date of Becoming A2O
+2021/11/22 08:25:50 - [INFO ] - Creating histogram with number of agents in each state
+2021/11/22 08:26:10 - [INFO ] - Recording file as processes in NYL.lst
+2021/11/22 08:26:10 - [INFO ] - Ending NYL agent processing

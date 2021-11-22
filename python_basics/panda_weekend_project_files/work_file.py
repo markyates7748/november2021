@@ -115,7 +115,9 @@ try:
 
                 # create new dataframe which groups agents by Agency State
                 logging.info("Grouping Agent Id by Agency State")
-                new_df_1 = pd.DataFrame(latest_file.groupby(["Agency State"])["Agent Id"])
+                #new_df_1 = pd.DataFrame(latest_file.groupby(["Agency State"])["Agent Id"])
+                #print(new_df_1)
+                new_df_1 = latest_file.sort_values(by=["Agency State"])
                 print(new_df_1)
 
                 # create new dataframe with Agent Name, Agent Writing Contract Start Date, Date when an agent became A20
@@ -126,8 +128,9 @@ try:
                 # create data visualization with first two dataframes
                 logging.info("Creating histogram with number of agents in each state")
                 try:
-                    hist_df = pd.DataFrame(latest_file["Agency State"].value_counts())
-                    hist_df.hist(column="Agency State")
+                    #hist_df = pd.DataFrame(latest_file["Agency State"].value_counts())
+                    #hist_df.hist(column="Agency State")
+                    hist_df = new_df_1.hist(column="Agent Postal Code")
                     plt.show()
                 except Exception as e:
                     logging.error('Error creating histogram', exc_info=True)
