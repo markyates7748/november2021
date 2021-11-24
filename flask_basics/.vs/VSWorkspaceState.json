@@ -1,9 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\sample_flask_db",
-    "\\sample_flask_db\\todo_files"
+    "\\exercise_one\\templates",
+    "\\exercise_one\\__pycache__",
+    "\\exercise_two",
+    "\\exercise_two\\templates"
   ],
-  "SelectedNode": "\\sample_flask_db\\todo_files\\models.py",
+  "SelectedNode": "\\exercise_two\\templates",
   "PreviewInSolutionExplorer": false
 }
