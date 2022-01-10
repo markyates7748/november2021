@@ -1,0 +1,30 @@
+curl - get info from url
+diff - compare text files
+grep - search function
+less - view file without an editor
+ping - test connectivity
+ps - show running processes
+top - show machine data
+uname - show system information
+wget - get content from internet
+shred - destroy a file
+
+#!/bin/bash
+yum update -y
+yum install git-all -y
+yum install python3 -y
+yum install python3-pip -y
+pip3 install flask
+git clone https://github.com/markyates7748/november2021
+cd november2021/flask_basics/sample_flask_blog/first_blog
+flask run --host=0.0.0.0
+
+<script>
+#!/bin/bash
+sudo yum update -y
+sudo yum install git-all -y
+sudo yum install maven -y
+git clone https://github.com/markyates7748/aline-bank-microservice-my/tree/dev /tmp/bank_ms
+cd /tmp/bank_ms
+mvn spring-boot:run -pl bank-microservice
+</script>
